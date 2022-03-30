@@ -1,0 +1,37 @@
+@import "../../styles/colors.scss";
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  max-height: 1080px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  .content {
+    width: 95%;
+    max-width: 1024px;
+  }
+}
+
+.background_images {
+  background-image: url("../../public/assets/top-background-image.png"),
+    url("../../public/assets/galaxy.png"),
+    url("../../public/assets/bottom-background-image.png");
+  background-position: -40% -2%, -2% 100%, 140% 102%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 70%, 13%, 70%;
+
+  @media screen and (orientation: "landscape") {
+    background-position: left top, center bottom, right bottom;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 30%, 13%, 30%;
+  }
+}
+
+.light_background {
+  background-color: $light-background;
+}
+
+.dark_background {
+  background-color: $dark-background;
+}

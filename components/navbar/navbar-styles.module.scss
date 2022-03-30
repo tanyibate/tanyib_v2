@@ -1,0 +1,48 @@
+@import "../../styles/colors.scss";
+
+.navbar {
+  padding: 0 3%;
+  display: flex;
+  justify-items: center;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .logo {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 140%;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+    .links {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 70px;
+      a {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        color: #ffffff;
+        opacity: 0.37;
+        &:hover {
+          color: $light-blue;
+          opacity: 1;
+          &::after {
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -5px;
+            margin: 0 auto;
+            background-color: $light-blue;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
