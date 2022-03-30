@@ -2,12 +2,19 @@
 
 .navbar {
   padding: 0 3%;
+  padding-top: 25px;
   display: flex;
   justify-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+    max-width: 1800px;
     .logo {
       font-family: "Poppins";
       font-style: normal;
@@ -21,6 +28,7 @@
       display: flex;
       justify-content: space-between;
       column-gap: 70px;
+      align-items: center;
       a {
         font-family: "Poppins";
         font-style: normal;
@@ -28,18 +36,21 @@
         font-size: 20px;
         color: #ffffff;
         opacity: 0.37;
+        position: relative;
+        transition: 0.5s;
         &:hover {
           color: $light-blue;
           opacity: 1;
           &::after {
+            content: "";
             height: 6px;
             width: 6px;
             border-radius: 50%;
             position: absolute;
             bottom: -5px;
-            margin: 0 auto;
+            right: 50%;
+            transform: translateX(50%);
             background-color: $light-blue;
-            display: none;
           }
         }
       }

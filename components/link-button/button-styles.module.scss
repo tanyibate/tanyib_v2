@@ -1,0 +1,14 @@
+@import "../../styles/colors.scss";
+
+.button {
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: transparent;
+  color: $light-blue;
+  border: 1px solid $light-blue;
+  border-radius: 10px;
+  height: fit-content;
+  width: fit-content;
+}

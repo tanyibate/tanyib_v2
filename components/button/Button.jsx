@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./button-styles.modules.scss";
+import styles from "./button-styles.module.scss";
 
 export default function Button({ fn, children }) {
   return (

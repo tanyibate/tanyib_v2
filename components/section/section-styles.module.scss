@@ -1,12 +1,12 @@
 @import "../../styles/colors.scss";
 
 .container {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   max-height: 1080px;
   display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
   .content {
     width: 95%;
     max-width: 1024px;
