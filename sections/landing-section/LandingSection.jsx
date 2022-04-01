@@ -5,10 +5,22 @@ import styles from "./landing-section-styles.module.scss";
 
 export default function LandingSection() {
   const name = "Bate Tanyi";
+  const firstName = "Bate";
+  const lastName = "Tanyi";
   const nameArray = [];
+  const firstNameArray = [];
+  const lastNameArray = [];
+
   for (var i = 0; i < name.length; i++) {
     nameArray.push(<span>{name.charAt(i)}</span>);
   }
+  for (var i = 0; i < firstName.length; i++) {
+    firstNameArray.push(<span>{firstName.charAt(i)}</span>);
+  }
+  for (var i = 0; i < lastName.length; i++) {
+    lastNameArray.push(<span>{lastName.charAt(i)}</span>);
+  }
+
   return (
     <Section
       {...{ id: "landing", backgroundColour: "light", backgroundImages: true }}
@@ -20,8 +32,10 @@ export default function LandingSection() {
           <p className="text-xl light-blue">Hello, my name is</p>
           <div>
             <h1 className="lg:hidden">{nameArray.map((el) => el)}</h1>
-            <h1 className="hidden lg:block">Bate</h1>
-            <h1 className="hidden lg:block">Tanyi</h1>
+            <h1 className="hidden lg:block">
+              {firstNameArray.map((el) => el)}
+            </h1>
+            <h1 className="hidden lg:block">{lastNameArray.map((el) => el)}</h1>
           </div>
         </div>
         <div
