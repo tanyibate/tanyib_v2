@@ -11,4 +11,9 @@
   border-radius: 10px;
   height: fit-content;
   width: fit-content;
+  transition: 0.5s;
+  &:hover {
+    color: $light-background;
+    background-color: $light-blue;
+  }
 }

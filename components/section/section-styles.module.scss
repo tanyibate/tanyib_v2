@@ -1,7 +1,8 @@
 @import "../../styles/colors.scss";
 
 .container {
-  width: 100%;
+  width: 100vw;
+  min-width: 100vw;
   min-height: 100vh;
   max-height: 1080px;
   display: flex;

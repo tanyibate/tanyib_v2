@@ -4,7 +4,6 @@
   all: unset;
   cursor: pointer;
   padding: 15px 30px;
-  background-color: transparent;
   color: $light-blue;
   border: 1px solid $light-blue;
   border-radius: 10px;
@@ -16,4 +15,11 @@
   letter-spacing: 0px;
   text-align: center;
   height: fit-content;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    color: $light-background;
+    background-color: $light-blue;
+  }
 }

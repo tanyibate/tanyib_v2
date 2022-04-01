@@ -1,0 +1,126 @@
+@import "../../styles/colors.scss";
+
+$typerwriter-time-mobile: 3s;
+
+.landing {
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: white;
+    position: relative;
+    width: max-content;
+    span {
+      color: white;
+      visibility: hidden;
+      animation: visible 300ms linear forwards;
+      position: relative;
+      &::after {
+        width: 0.125em;
+        height: 80%;
+        content: "";
+        position: absolute;
+        bottom: 50%;
+        right: 100%;
+        transform: translateY(50%);
+        background: white;
+      }
+    }
+
+    @for $i from 1 through 10 {
+      span:nth-child(#{$i}) {
+        animation-delay: 300ms * $i;
+        &::after {
+          animation: blink 500ms linear infinite;
+          animation-delay: 300ms * $i;
+        }
+      }
+    }
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+
+  /*h1::after {
+    width: 0.125em;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+    animation: typewriter $typerwriter-time-mobile steps(10) 1s forwards,
+      blink 500ms steps(10) infinite;
+  }*/
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .description {
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc($typerwriter-time-mobile) forwards;
+  }
+
+  @media screen and (min-width: 640px) {
+    h1 {
+      font-size: 90px;
+      line-height: 90px;
+    }
+
+    h2 {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    h1,
+    h2,
+    p {
+      text-align: left;
+    }
+  }
+
+  @keyframes typewriter {
+    to {
+      left: 100%;
+    }
+  }
+
+  @keyframes visible {
+    to {
+      visibility: visible;
+    }
+  }
+
+  @keyframes blink {
+    to {
+      background: transparent;
+    }
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
