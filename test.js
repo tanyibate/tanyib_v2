@@ -1,7 +1,7 @@
-const lengths = [53.2, 61.12];
+const lengths = [59.31, 61.12, 36.54, 55.44];
 let previous = 0;
 let lengthPercentages = [];
-const length = 258.41;
+const length = 212.41;
 lengths.forEach((el) => {
   let calculatedPercentage = el / length;
   lengthPercentages.push(calculatedPercentage + previous);

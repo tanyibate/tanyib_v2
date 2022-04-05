@@ -1,4 +1,5 @@
 import React from "react";
+import BurgerMenu from "../burger-menu/BurgerMenu";
 import Button from "../button/Button";
 import styles from "./navbar-styles.module.scss";
 
@@ -14,7 +15,9 @@ export default function Navbar() {
           <a href="#contact">Contact</a>
           <Button>Resume</Button>
         </div>
-        <div className="lg:hidden">Burger</div>
+        <div className="lg:hidden">
+          <BurgerMenu />
+        </div>
       </nav>
     </header>
   );

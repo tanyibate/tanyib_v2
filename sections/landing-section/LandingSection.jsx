@@ -12,13 +12,23 @@ export default function LandingSection() {
   const lastNameArray = [];
 
   for (var i = 0; i < name.length; i++) {
-    nameArray.push(<span>{name.charAt(i)}</span>);
+    nameArray.push(
+      <span key={name.charAt(i) + "nameChar" + i}>{name.charAt(i)}</span>
+    );
   }
   for (var i = 0; i < firstName.length; i++) {
-    firstNameArray.push(<span>{firstName.charAt(i)}</span>);
+    firstNameArray.push(
+      <span key={firstName.charAt(i) + "firstNameChar" + i}>
+        {firstName.charAt(i)}
+      </span>
+    );
   }
   for (var i = 0; i < lastName.length; i++) {
-    lastNameArray.push(<span>{lastName.charAt(i)}</span>);
+    lastNameArray.push(
+      <span key={lastName.charAt(i) + +"lastNameChar" + i}>
+        {lastName.charAt(i)}
+      </span>
+    );
   }
 
   return (
@@ -30,7 +40,7 @@ export default function LandingSection() {
       >
         <div className="flex items-center flex-col lg:items-start">
           <p className="text-xl light-blue">Hello, my name is</p>
-          <div>
+          <div className="flex flex-col items-center lg:items-start">
             <h1 className="lg:hidden">{nameArray.map((el) => el)}</h1>
             <h1 className="hidden lg:block">
               {firstNameArray.map((el) => el)}

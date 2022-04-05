@@ -1,0 +1,158 @@
+@import "../../styles/colors.scss";
+
+.burger {
+  all: unset;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid $light-blue;
+  row-gap: 4px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  span {
+    width: 20px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: white;
+    transition: 0.5s;
+    transform-origin: left center;
+  }
+}
+
+.menu {
+  z-index: 2;
+  position: fixed;
+  width: 326px;
+  max-width: 326px;
+  height: 100vh;
+  background-color: $dark-background;
+  padding: 77px 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  right: -326px;
+  top: 0;
+  a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    opacity: 0.37;
+    position: relative;
+    transition: 0.5s;
+    &:hover {
+      color: $light-blue;
+      opacity: 1;
+    }
+  }
+}
+
+.open {
+  row-gap: 5.07px;
+
+  span:nth-child(1) {
+    animation: open1 500ms linear forwards;
+  }
+  span:nth-child(2) {
+    animation: open2 500ms linear forwards;
+  }
+  span:nth-child(3) {
+    animation: open3 500ms linear forwards;
+  }
+}
+
+.close {
+  span {
+    row-gap: 4px;
+  }
+  span:nth-child(1) {
+    animation: close1 500ms linear forwards;
+  }
+  span:nth-child(2) {
+    animation: close2 500ms linear forwards;
+  }
+  span:nth-child(3) {
+    animation: close3 500ms linear forwards;
+  }
+}
+
+.slide {
+  animation: slide 500ms linear forwards;
+}
+
+.slide_back {
+  animation: slide-back 500ms linear forwards;
+}
+
+@keyframes open1 {
+  to {
+    transform: translateX(2.93px) rotate(45deg);
+    background-color: $light-blue;
+  }
+}
+
+@keyframes open2 {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes open3 {
+  to {
+    transform: translateX(2.93px) rotate(315deg);
+    background-color: $light-blue;
+  }
+}
+
+@keyframes close1 {
+  from {
+    transform: translateX(2.93px) rotate(45deg);
+    background-color: $light-blue;
+  }
+
+  to {
+    transform: none;
+    background-color: #ffffff;
+  }
+}
+
+@keyframes close2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes close3 {
+  from {
+    transform: translateX(2.93px) rotate(315deg);
+    background-color: $light-blue;
+  }
+
+  to {
+    transform: none;
+    background-color: white;
+  }
+}
+
+@keyframes slide {
+  to {
+    right: 0px;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    right: 0;
+  }
+  to {
+    right: -326px;
+  }
+}
