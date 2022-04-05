@@ -12,12 +12,13 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: white;
+  scroll-behavior: smooth;
 }
 
 h1,
 h2,
 p {
-  text-align: center;
+  text-align: left;
 }
 
 a {
@@ -31,6 +32,14 @@ p {
 
 .light-blue {
   color: $light-blue;
+}
+
+ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  list-style-type: disc;
+  list-style-position: inside;
 }
 
 span,

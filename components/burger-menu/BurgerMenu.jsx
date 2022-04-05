@@ -26,10 +26,18 @@ export default function BurgerMenu() {
   return (
     <div className="relative">
       <div className={menuClasses}>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" onClick={activateBurgerMenu}>
+          About
+        </a>
+        <a href="#experience" onClick={activateBurgerMenu}>
+          Experience
+        </a>
+        <a href="#work" onClick={activateBurgerMenu}>
+          Work
+        </a>
+        <a href="#contact" onClick={activateBurgerMenu}>
+          Contact
+        </a>
         <Button>Resume</Button>
       </div>
 

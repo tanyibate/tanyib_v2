@@ -1,0 +1,41 @@
+@import "../../styles/colors.scss";
+
+.image_placeholder {
+  width: 66%;
+  max-width: 413px;
+  aspect-ratio: 285 / 335;
+  height: auto;
+  border-bottom-left-radius: 20%;
+  overflow: hidden;
+  position: relative;
+  .image_background {
+    background-color: $light-blue;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 20%;
+    background-color: $light-blue;
+    width: 100%;
+    aspect-ratio: 1;
+    height: auto;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  img {
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom-left-radius: 20%;
+  }
+}
+
+.text {
+  font-size: 16px;
+  line-height: 180%;
+  @media screen and (min-width: 1024px) {
+    max-width: 634px;
+  }
+}
