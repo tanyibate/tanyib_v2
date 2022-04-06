@@ -55,7 +55,7 @@ export default function LandingSection() {
           <p className=" max-w-xl lg:max-w-lg">
             I am full-stack developer that specializes in building responsive
             and accessible web applications. I love all things that are
-            JavaScript and have worked witha range of different JavaScript
+            JavaScript and have worked with a range of different JavaScript
             frameworks such as React.js, Vue.js and Node.js.
           </p>
           <LinkButton href="#portfolio">Check Out my Portfolio</LinkButton>
