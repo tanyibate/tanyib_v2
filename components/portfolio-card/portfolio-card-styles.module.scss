@@ -1,0 +1,35 @@
+.card_container {
+  width: 300px;
+  min-width: 300px;
+
+  .card {
+    width: 100%;
+    aspect-ratio: 443/287;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .description {
+    width: 100%;
+    text-align: left;
+    .title {
+      color: white;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 34px;
+      letter-spacing: 0px;
+    }
+    .about {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 29px;
+      letter-spacing: 0px;
+      text-align: left;
+    }
+  }
+  @media screen and (min-width: 500px) {
+    width: 443px;
+    min-width: 443px;
+  }
+}

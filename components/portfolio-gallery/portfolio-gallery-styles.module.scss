@@ -1,0 +1,43 @@
+.slider_container {
+  max-width: 100%;
+  width: 100%;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  position: absolute;
+  left: 0;
+  display: flex;
+  column-gap: 20px;
+}
+
+.slide_left {
+  animation: slide-left 500ms linear;
+  @media screen and (min-width: 500px) {
+    animation: slide-left-large 500ms linear;
+  }
+}
+
+.pagination {
+  display: flex;
+  column-gap: 32px;
+  span {
+    color: white;
+    font-weight: 400;
+    font-size: 22px;
+  }
+}
+
+@keyframes slide-left {
+  to {
+    transform: translateX(-320px);
+  }
+}
+
+@keyframes slide-left-large {
+  to {
+    transform: translateX(-463px);
+  }
+}

@@ -1,9 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
 import Navbar from "../components/navbar/Navbar";
-import Section from "../components/section/Section";
 import AboutSection from "../sections/about-section/AboutSection";
 import LandingSection from "../sections/landing-section/LandingSection";
+import PortfolioSection from "../sections/portfolio-section/PortfolioSection";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -19,6 +18,7 @@ export default function Home() {
       <main className={styles.main}>
         <LandingSection />
         <AboutSection />
+        <PortfolioSection />
       </main>
 
       <footer className={styles.footer}></footer>

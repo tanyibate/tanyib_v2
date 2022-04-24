@@ -4,7 +4,7 @@ import styles from "./about-section-styles.module.scss";
 
 export default function AboutSection() {
   return (
-    <Section id="about" backgroundColour={"dark"}>
+    <Section id="about" backgroundColour={"dark"} backgroundImages={false}>
       <div className="flex flex-col space-y-10 lg:space-y-0 lg:justify-between lg:items-end lg:flex-row-reverse w-full items-center justify-center">
         <div className={styles.image_placeholder}>
           <div className={styles.image_background}></div>
