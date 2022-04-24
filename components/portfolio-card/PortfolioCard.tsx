@@ -5,6 +5,7 @@ export type Project = {
   image: string;
   title: string;
   description: string;
+  url: string;
 };
 
 type PortfolioCardProps = {
@@ -13,12 +14,17 @@ type PortfolioCardProps = {
 
 export default function PortfolioCard({ project }: PortfolioCardProps) {
   return (
-    <div className={styles.card_container}>
+    <a
+      className={styles.card_container}
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <img className={styles.card} src={project.image} alt={project.title} />
       <div className={styles.description}>
         <h4 className={styles.title}>{project.title}</h4>
         <p className={styles.about}>{project.description}</p>
       </div>
-    </div>
+    </a>
   );
 }

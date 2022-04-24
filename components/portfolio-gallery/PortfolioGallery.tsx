@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./portfolio-gallery-styles.module.scss";
 import PortfolioCard from "../portfolio-card/PortfolioCard";
 import { Project } from "../portfolio-card/PortfolioCard";
+import classNames from "classnames";
 
 export type PortfolioGalleryProps = {
   projects: Project[];
@@ -12,6 +13,45 @@ export default function PortfolioGallery({
   projects,
   title,
 }: PortfolioGalleryProps) {
+  const initialiseProjects = (projects: Project[]): Project[] => {
+    const newProjects = [...projects];
+    const lastProject = newProjects.pop();
+    newProjects.unshift(lastProject);
+    return newProjects;
+  };
+
+  const [nextButtonClicked, setNextButtonClicked] = useState(false);
+  const [previousButtonClicked, setPreviousButtonClicked] = useState(false);
+  const [sliderProjects, setSliderProjects] = useState(
+    initialiseProjects(projects)
+  );
+
+  const sliderClasses = classNames({
+    [styles.slider]: true,
+    [styles.slide_left]: nextButtonClicked,
+    [styles.slide_right]: previousButtonClicked,
+  });
+
+  const sliderController = (): void => {
+    if (nextButtonClicked) restructureSliderProjectsOnNextButton();
+    else restructureSliderProjectsOnPreviousButton();
+  };
+
+  const restructureSliderProjectsOnNextButton = (): void => {
+    setNextButtonClicked(false);
+    const projects = [...sliderProjects];
+    const firstProject = projects.shift();
+    projects.push(firstProject);
+    setSliderProjects(projects);
+  };
+  const restructureSliderProjectsOnPreviousButton = (): void => {
+    setPreviousButtonClicked(false);
+    const projects = [...sliderProjects];
+    const firstProject = projects.pop();
+    projects.unshift(firstProject);
+    setSliderProjects(projects);
+  };
+
   return (
     <div className="w-full  h-full flex flex-col space-y-6 justify-betweenas">
       <div className="flex justify-between items-center">
@@ -21,6 +61,7 @@ export default function PortfolioGallery({
             src="/assets/arrow-circle-right.svg"
             alt="previous project button"
             className="cursor-pointer"
+            onClick={() => setPreviousButtonClicked(true)}
           />
           <img
             src="/assets/arrow-circle-right.svg"
@@ -29,13 +70,14 @@ export default function PortfolioGallery({
             style={{
               transform: "rotate(180deg)",
             }}
+            onClick={() => setNextButtonClicked(true)}
           />
         </div>
       </div>
 
       <div className={styles.slider_container}>
-        <div className={styles.slider}>
-          {projects.map((project) => {
+        <div className={sliderClasses} onAnimationEnd={sliderController}>
+          {sliderProjects.map((project) => {
             return (
               <PortfolioCard
                 {...{

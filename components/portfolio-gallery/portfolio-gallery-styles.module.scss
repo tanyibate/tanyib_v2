@@ -1,22 +1,33 @@
 .slider_container {
   max-width: 100%;
   width: 100%;
-  height: 450px;
+  height: 500px;
   position: relative;
   overflow: hidden;
 }
 
 .slider {
   position: absolute;
-  left: 0;
+  top: 0;
+  left: -320px;
   display: flex;
   column-gap: 20px;
+  @media screen and (min-width: 500px) {
+    left: -463px;
+  }
 }
 
 .slide_left {
   animation: slide-left 500ms linear;
   @media screen and (min-width: 500px) {
     animation: slide-left-large 500ms linear;
+  }
+}
+
+.slide_right {
+  animation: slide-right 500ms linear;
+  @media screen and (min-width: 500px) {
+    animation: slide-right-large 500ms linear;
   }
 }
 
@@ -39,5 +50,17 @@
 @keyframes slide-left-large {
   to {
     transform: translateX(-463px);
+  }
+}
+
+@keyframes slide-right {
+  to {
+    transform: translateX(320px);
+  }
+}
+
+@keyframes slide-right-large {
+  to {
+    transform: translateX(463px);
   }
 }
