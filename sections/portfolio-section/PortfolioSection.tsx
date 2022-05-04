@@ -38,7 +38,7 @@ export default function PortfolioSection() {
   return (
     <Section
       {...{
-        backgroundColour: "light",
+        backgroundColour: "dark",
         backgroundImages: false,
         id: "portfolio",
       }}

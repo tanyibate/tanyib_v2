@@ -3,6 +3,7 @@ import Navbar from "../components/navbar/Navbar";
 import AboutSection from "../sections/about-section/AboutSection";
 import LandingSection from "../sections/landing-section/LandingSection";
 import PortfolioSection from "../sections/portfolio-section/PortfolioSection";
+import ServiceSection from "../sections/services-section/ServiceSection";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <main className={styles.main}>
         <LandingSection />
         <AboutSection />
+        <ServiceSection />
         <PortfolioSection />
       </main>
 

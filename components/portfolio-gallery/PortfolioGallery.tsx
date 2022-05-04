@@ -57,21 +57,36 @@ export default function PortfolioGallery({
       <div className="flex justify-between items-center">
         <h2>{title}</h2>
         <div className="flex space-x-6">
-          <img
-            src="/assets/arrow-circle-right.svg"
-            alt="previous project button"
-            className="cursor-pointer"
+          <div
+            className={styles.left_button}
             onClick={() => setPreviousButtonClicked(true)}
-          />
-          <img
-            src="/assets/arrow-circle-right.svg"
-            alt="next project button"
-            className="cursor-pointer"
-            style={{
-              transform: "rotate(180deg)",
-            }}
+          >
+            <img
+              src="/assets/chevron.svg"
+              alt="previous project button"
+              className={styles.light_chevron}
+            />
+            <img
+              src="/assets/chevron-dark.svg"
+              alt="previous project button"
+              className={styles.dark_chevron}
+            />
+          </div>
+          <div
+            className={styles.right_button}
             onClick={() => setNextButtonClicked(true)}
-          />
+          >
+            <img
+              src="/assets/chevron.svg"
+              alt="previous project button"
+              className={styles.light_chevron}
+            />
+            <img
+              src="/assets/chevron-dark.svg"
+              alt="previous project button"
+              className={styles.dark_chevron}
+            />
+          </div>
         </div>
       </div>
 
@@ -89,14 +104,15 @@ export default function PortfolioGallery({
           })}
         </div>
       </div>
-      <div className="w-full flex justify-end">
+      {/*
+        <div className="w-full flex justify-end">
         <div className={styles.pagination}>
           <span>1</span>
           <span>2</span>
           <span>3</span>
-          <img src="/assets/chevron.svg" alt="" />
+          <img src="/assets/chevron.svg" alt="chevron" />
         </div>
-      </div>
+      </div>*/}
     </div>
   );
 }

@@ -109,7 +109,12 @@ h2 {
   }
 }
 
-.typewriter {
+.swiper-pagination-bullet {
+  border: 1px solid $light-blue !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: $light-blue !important;
 }
 
 * {
