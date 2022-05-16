@@ -1,0 +1,22 @@
+.form {
+  input {
+    all: unset;
+    height: 60px;
+    width: 45%;
+    border-radius: 4px;
+    background: #081521;
+    color: rgba(255, 255, 255, 0.72);
+    padding: 15px 30px;
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+    }
+  }
+
+  .full_width {
+    width: 100%;
+  }
+
+  .large {
+    height: 150px;
+  }
+}

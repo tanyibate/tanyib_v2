@@ -50,12 +50,13 @@
     position: absolute;
     left: 0;
     bottom: 34px;
-    height: 65px;
+    height: calc(100% - 100px);
     overflow: hidden;
     max-height: calc(100% - 100px);
     width: calc(100%);
     padding: 0 34px;
     transition: 500ms;
+    transition-delay: 500ms;
   }
   .title {
     font-size: 20px;
@@ -65,7 +66,7 @@
   .line {
     background-color: $light-blue;
     height: 6px;
-    width: 0px;
+    width: 80%;
     position: absolute;
     left: 0;
     transition: 500ms;
@@ -78,13 +79,23 @@
     font-size: 16px;
     color: rgba(255, 255, 255, 0.72);
   }
-  &:hover {
+
+  @media (hover) {
     .content {
-      height: calc(100% - 100px);
+      height: 75px;
     }
 
     .line {
-      width: 80%;
+      width: 0px;
+    }
+    &:hover {
+      .content {
+        height: calc(100% - 100px);
+      }
+
+      .line {
+        width: 80%;
+      }
     }
   }
 }
