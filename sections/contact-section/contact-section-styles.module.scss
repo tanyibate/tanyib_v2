@@ -45,6 +45,10 @@
     padding: 15px 30px;
     box-sizing: border-box;
     border-radius: 8px;
+    &:focus {
+      border-width: 0;
+      outline: none !important;
+    }
   }
 
   .full_width {

@@ -3,9 +3,11 @@
 .navbar {
   padding: 0 3%;
   padding-top: 25px;
+  padding-bottom: 25px;
   display: flex;
   justify-items: center;
-  position: absolute;
+  position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
@@ -29,7 +31,7 @@
       justify-content: space-between;
       column-gap: 70px;
       align-items: center;
-      a {
+      .link {
         font-family: "Poppins";
         font-style: normal;
         font-weight: 400;
@@ -59,4 +61,12 @@
       }
     }
   }
+
+  @media screen and (min-width: 1024px) {
+    position: absolute;
+  }
+}
+
+.darken {
+  background: #001f338a;
 }

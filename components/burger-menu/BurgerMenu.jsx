@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "../button/Button";
+import DownloadButton from "../download-button/DownloadButton";
 import styles from "./burger-menu-styles.module.scss";
 import classNames from "classnames";
 
@@ -26,21 +26,26 @@ export default function BurgerMenu() {
   return (
     <div className="relative">
       <div className={menuClasses}>
-        <a href="#about" onClick={activateBurgerMenu}>
+        <a href="#about" onClick={activateBurgerMenu} className={styles.link}>
           About
         </a>
-        <a href="#services" onClick={activateBurgerMenu}>
+        <a
+          href="#services"
+          onClick={activateBurgerMenu}
+          className={styles.link}
+        >
           Experience
         </a>
-        <a href="#work" onClick={activateBurgerMenu}>
+        <a href="#work" onClick={activateBurgerMenu} className={styles.link}>
           Work
         </a>
-        <a href="#contact" onClick={activateBurgerMenu}>
-          Contact
+        <a href="#contact" onClick={activateBurgerMenu} className={styles.link}>
+          Contact Me
         </a>
-        <Button>Resume</Button>
+        <DownloadButton href="/assets/batetambe_tanyi.pdf">
+          Resume
+        </DownloadButton>
       </div>
-
       <button className={burgerClasses} onClick={activateBurgerMenu}>
         <span></span>
         <span></span>
