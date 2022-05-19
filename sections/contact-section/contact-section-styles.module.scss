@@ -1,13 +1,30 @@
 .form {
+  width: 100%;
+
+  .row {
+    width: 100%;
+    position: relative;
+    p {
+      color: rgb(236, 56, 56);
+      position: absolute;
+      bottom: 6px;
+      font-size: 14px;
+      left: 10px;
+      font-weight: bold;
+    }
+    padding-bottom: 32px;
+  }
   input {
     all: unset;
+    display: block;
     height: 60px;
-    width: 45%;
-    border-radius: 4px;
+    width: 48%;
+    border-radius: 8px;
     background: #081521;
     color: rgba(255, 255, 255, 0.72);
     padding: 15px 30px;
-    @media screen and (max-width: 1023px) {
+    box-sizing: border-box;
+    @media screen and (max-width: 1280px) {
       width: 100%;
     }
   }
@@ -18,5 +35,6 @@
 
   .large {
     height: 150px;
+    text-align: start;
   }
 }

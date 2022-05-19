@@ -2,6 +2,10 @@
 
 .burger {
   all: unset;
+  position: fixed;
+  right: 25px;
+  top: 25px;
+  z-index: 8;
   width: 40px;
   height: 40px;
   display: flex;
@@ -12,8 +16,6 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  position: relative;
-  z-index: 3;
   span {
     width: 20px;
     height: 2px;
@@ -25,7 +27,7 @@
 }
 
 .menu {
-  z-index: 2;
+  z-index: 5;
   position: fixed;
   width: 326px;
   max-width: 326px;

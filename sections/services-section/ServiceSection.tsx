@@ -17,39 +17,39 @@ export default function ServiceSection() {
   const services: ServiceCardProps[] = [
     {
       image: "/assets/icons/javascript.svg",
-      title: "Developing Responsive Web apps",
+      title: "Deploy digital services to the web",
       description:
-        "I am capabale of develping resposinve web app using javascript frameworks such as React and Vue.js",
+        "Do you need help bringing your services to the web? I can help you deploy your service to the cloud.",
+    },
+    {
+      image: "/assets/icons/javascript.svg",
+      title: "Implementing designs or wireframes",
+      description:
+        "I can help turn your idea into a pixel-perfect interactive prototype using CSS,HTML and JavaScript.",
     },
     {
       image: "/assets/icons/javascript.svg",
       title: "Developing Responsive Web apps",
       description:
-        "I am capabale of develping resposinve web app using javascript frameworks such as React and Vue.js",
+        "I can help you create complex software for your business that will run on web browsers and mobile application user interfaces.",
     },
     {
       image: "/assets/icons/javascript.svg",
-      title: "Developing Responsive Web apps",
+      title: "Create static or server side rendered webpages",
       description:
-        "I am capabale of develping resposinve web app using javascript frameworks such as React and Vue.js",
+        "If you require static webpages such as a blog or personal website, please get in touch.",
     },
     {
       image: "/assets/icons/javascript.svg",
-      title: "Developing Responsive Web apps",
+      title: "Restful API implementation",
       description:
-        "I am capabale of develping resposinve web app using javascript frameworks such as React and Vue.js",
+        "I can help you create RESTful api services with JavaScript frameworks such as Express.js or Nest.js.",
     },
     {
       image: "/assets/icons/javascript.svg",
-      title: "Developing Responsive Web apps",
+      title: "Improve quality and reliability of your app",
       description:
-        "I am capabale of develping resposinve web app using javascript frameworks such as React and Vue.js",
-    },
-    {
-      image: "/assets/icons/javascript.svg",
-      title: "Developing Responsive Web apps",
-      description:
-        "I am capabale of develping resposinve web app using javascript frameworks such as React and Vue.js",
+        "I can help ensure the realiablity and quality of your application by implementing tests against your applications scope and specification.",
     },
   ];
   return (
@@ -96,7 +96,7 @@ export default function ServiceSection() {
           onSwiper={(swiper) => console.log(swiper)}
         >
           {services.map((service) => (
-            <SwiperSlide>
+            <SwiperSlide key={service.title}>
               <ServiceCard
                 {...{
                   title: service.title,

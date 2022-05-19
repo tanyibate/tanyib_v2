@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navbar from "../components/navbar/Navbar";
 import AboutSection from "../sections/about-section/AboutSection";
+import ContactSection from "../sections/contact-section/ContactSection";
 import LandingSection from "../sections/landing-section/LandingSection";
 import PortfolioSection from "../sections/portfolio-section/PortfolioSection";
 import ServiceSection from "../sections/services-section/ServiceSection";
@@ -21,6 +22,7 @@ export default function Home() {
         <AboutSection />
         <ServiceSection />
         <PortfolioSection />
+        <ContactSection />
       </main>
 
       <footer className={styles.footer}></footer>

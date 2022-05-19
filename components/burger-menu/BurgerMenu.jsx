@@ -29,7 +29,7 @@ export default function BurgerMenu() {
         <a href="#about" onClick={activateBurgerMenu}>
           About
         </a>
-        <a href="#experience" onClick={activateBurgerMenu}>
+        <a href="#services" onClick={activateBurgerMenu}>
           Experience
         </a>
         <a href="#work" onClick={activateBurgerMenu}>
