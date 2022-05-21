@@ -15,15 +15,15 @@ export default function AboutSection() {
           <h2>Me, Myself & I</h2>
           <p className={styles.text}>
             I am a full-stack developer who has a love for everything that is
-            JavaScript my forte is combination of React on the front-end and
+            JavaScript, my forte is a combination of React on the front-end and
             Express.js/Node.js on the backend. I have dabbled in a range
             JavaScript frameworks such as Vue.js and Angular.
             <br />
             <br />I have been working as a full-stack developer for more than
-            two years now and over that time I've worked with government clients
-            and completed personal projects during which I had the opportunity
+            two years now. During this time, I've worked with Government
+            clients, and have completed personal projects which has enabled me
             to develop skills such as database management, quality analysis,
-            application development and testing, I am always looking for more
+            application development and testing. I am always looking for more
             opportunities to challenge myself as a developer so please feel free
             to contact me.{" "}
           </p>
