@@ -7,6 +7,13 @@ import { Project } from "../../components/portfolio-card/PortfolioCard";
 export default function PortfolioSection() {
   const projects: Project[] = [
     {
+      title: "E-commerce platform",
+      description:
+        "A e-commerce platform created with React.js and an Express.js server serving the backend. Checkout functionality is currently in progress.",
+      image: "/assets/project-images/audiophile.png",
+      url: "https://tech-marketplace-frontend.vercel.app",
+    },
+    {
       title: "REST API Countries Dashboard",
       description:
         "A country statistics dashboard created using React with data supplied by the restcountries.com api. Countries can be filtered by region and title.",
