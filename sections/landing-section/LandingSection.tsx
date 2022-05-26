@@ -53,7 +53,7 @@ export default function LandingSection() {
         >
           <h2>I build things for the web.</h2>
           <p className=" max-w-xl lg:max-w-lg">
-            I am full-stack developer that specializes in building responsive
+            I am a full-stack developer that specializes in building responsive
             and accessible web applications. I love all things that are
             JavaScript and have worked with a range of different JavaScript
             frameworks such as React.js, Vue.js and Node.js.
