@@ -34,7 +34,7 @@ export default function BurgerMenu() {
           onClick={activateBurgerMenu}
           className={styles.link}
         >
-          Experience
+          Services
         </a>
         <a
           href="#portfolio"
