@@ -36,8 +36,12 @@ export default function BurgerMenu() {
         >
           Experience
         </a>
-        <a href="#work" onClick={activateBurgerMenu} className={styles.link}>
-          Work
+        <a
+          href="#portfolio"
+          onClick={activateBurgerMenu}
+          className={styles.link}
+        >
+          Portfolio
         </a>
         <a href="#contact" onClick={activateBurgerMenu} className={styles.link}>
           Contact Me
