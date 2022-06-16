@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import DownloadButton from "../download-button/DownloadButton";
 import styles from "./burger-menu-styles.module.scss";
 import classNames from "classnames";
+import Hamburger from "hamburger-react";
 
 export default function BurgerMenu() {
   const [isMounted, setIsMounted] = useState(false);
@@ -50,11 +51,13 @@ export default function BurgerMenu() {
           Resume
         </DownloadButton>
       </div>
-      <button className={burgerClasses} onClick={activateBurgerMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div className={styles.burger}>
+        <Hamburger
+          onToggle={activateBurgerMenu}
+          toggled={burgerMenuActive}
+          color={burgerMenuActive ? "#64ffda" : "#ffffff"}
+        />
+      </div>
     </div>
   );
 }
