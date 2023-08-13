@@ -7,6 +7,20 @@ import { Project } from "../../components/portfolio-card/PortfolioCard";
 export default function PortfolioSection() {
   const projects: Project[] = [
     {
+      title: "Connect 4 AI",
+      description:
+        "A near impossible to beat Connect 4 AI created using the minimax algorithm. The AI is accesible via a REST API.",
+      image: "/assets/project-images/connect4.png",
+      url: "https://connect-four-iota.vercel.app/",
+    },
+    {
+      title: "Tapres",
+      description:
+        "My first ever commissioned project which is a real estate platform created using Next.js",
+      image: "/assets/project-images/tapres.png",
+      url: "https://www.tapres.co.uk/",
+    },
+    {
       title: "E-commerce platform",
       description:
         "A e-commerce platform created with React.js and an Express.js server serving the backend. Checkout functionality is currently in progress.",
