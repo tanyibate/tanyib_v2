@@ -48,13 +48,6 @@ export default function PortfolioSection() {
       image: "/assets/project-images/sunnyside-agency-landing-page.png",
       url: "https://sunnyside-agency-landing-page-ecru.vercel.app/",
     },
-    {
-      title: "Teacozy Chatbot",
-      description:
-        "A full-stack application with React on the front-end and Express.js on the backend. It's a chatbot that allows customer of teashop to ask questions about their business.",
-      image: "/assets/project-images/tea-cozy-chatbot.png",
-      url: "https://chatbot-frontend-chi.vercel.app/",
-    },
   ];
   return (
     <Section
